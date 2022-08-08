@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.generation.blogPessoal.model.PostagemModel;
 import com.generation.blogPessoal.repository.PostagemRepository;
 
@@ -24,6 +23,7 @@ import com.generation.blogPessoal.repository.PostagemRepository;
 @RequestMapping("/postagens") 
 @CrossOrigin(origins = "*", allowedHeaders = "*") 
 public class PostagemController {
+	
 	@Autowired 
 	private PostagemRepository postagemRepository;
 	
