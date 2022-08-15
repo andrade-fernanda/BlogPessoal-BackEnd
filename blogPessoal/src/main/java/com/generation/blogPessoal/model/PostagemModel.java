@@ -2,7 +2,6 @@ package com.generation.blogPessoal.model;
 
 import java.time.LocalDateTime;
 
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -40,14 +39,9 @@ public class PostagemModel {
 	@JsonIgnoreProperties("postagem")
 	private TemaModel tema;
 
-
-	public TemaModel getTema() {
-		return tema;
-	}
-
-	public void setTema(TemaModel tema) {
-		this.tema = tema;
-	}
+	@ManyToOne
+    @JsonIgnoreProperties("postagem")
+    private UsuarioModel usuario;
 
 	public Long getId() {
 		return id;
@@ -80,4 +74,21 @@ public class PostagemModel {
 	public void setData(LocalDateTime data) {
 		this.data = data;
 	}
+
+	public TemaModel getTema() {
+		return tema;
+	}
+
+	public void setTema(TemaModel tema) {
+		this.tema = tema;
+	}
+	
+	public UsuarioModel getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(UsuarioModel usuario) {
+		this.usuario = usuario;
+	}
+	
 }
