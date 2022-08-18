@@ -4,8 +4,8 @@ import org.springdoc.core.customizers.OpenApiCustomiser;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.models.responses.ApiResponse;
+import io.swagger.v3.oas.models.responses.ApiResponses;
 import io.swagger.v3.oas.models.ExternalDocumentation;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
@@ -19,14 +19,14 @@ public class SwaggerConfig {
 		public OpenAPI springBlogPessoalOpenAPI() {
 			return new OpenAPI()
 					.info(new Info()
-						.title("Projeto Blog Pessoal")
+						.title("Blog Pessoal Fernanda Andrade")
 						.description("Projeto Blog Pessoal - Generation Brasil")
 						.version("v0.0.1")
 					.license(new License()
-						.name("Generation Brasil")
-						.url("https://brazil.generation.org/"))
+						.name("Blog Pessoal Fernanda Andrade")
+						.url("https://github.com/andrade-fernanda/BlogPessoal_Gen_SpringBoot"))
 					.contact(new Contact()
-						.name("Fernanda Andrade")
+						.name("Projeto Blog Pessoal Fernanda Andrade")
 						.url("https://github.com/andrade-fernanda/BlogPessoal_Gen_SpringBoot")
 						.email("fvw.andrade@gmail.com")))
 					.externalDocs(new ExternalDocumentation()
@@ -61,5 +61,3 @@ public class SwaggerConfig {
 		}
 		
 	}
-
-}
